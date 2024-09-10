@@ -1,0 +1,13 @@
+name: "shell 命令执行"
+version: "v0.0.1"
+description: "执行 shell 命令"
+image: ecr.elevenz.com/software/shell-runner:v0.0.1
+inputs:
+  - name: cmd
+    description: "cmds to be executed"
+    type : text
+    default: ""
+
+envs:
+  - name: EXEC_CMD
+    value: $(inputs.cmd)
